@@ -1,0 +1,68 @@
+---
+title: '<div class="jumbotron"><h1 class="title toc-ignore display-3" align="center">Perception and Cognition</h1><p class="lead" align="center">Danielle Navarro</p></div>'
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+    css: mystyle.css
+pagetitle: "Perception and Cognition"
+---
+
+```{r,echo=FALSE}
+rm(list=objects()) # start with a clean workspace
+```
+
+
+This lecture series is part of PSYC2071, and provides an introduction to cognitive psychology. The lecture materials present a brief history to the topic, and then discuss key ideas in human attention, categorisation and reasoning. This page contains copies of the lectures slides as PowerPoint and PDF files (please note the PowerPoint slides are quite large). The lecture slides are typically very long (about 60 slides per lecture) and are designed to take advantage of the visual medium. My view is that this works well as method for giving the lectures, but it has some drawbacks for study purposes. To address this, there are also a set of text-based lecture summaries on this page (in HTML, PDF and Markdown formats) that may prove useful.
+
+
+## Lecture 1: Introduction
+
+Topics: Perception vs cognition, historical perspective, behaviourism vs cognitivism, the computational metaphor, Marr's levels
+
+- Slides in [PowerPoint](lecture1.pptx) format
+- Slides in [PDF](lecture1.pdf) format
+- Lecture summary as [HTML document](lecture1-summary.html)
+- Lecture summary as [Markdown document](lecture1-summary.md)
+
+## Lecture 2: Attention
+
+Topics: Kinds of attention, auditory attention, early vs late selection, visual attention, visual search, serial vs parallel
+
+- Slides in [PowerPoint](lecture2.pptx) format
+- Slides in [PDF](lecture2.pdf) format 
+- Lecture summary as [HTML document](lecture2-summary.html)
+- Lecture summary as [Markdown document](lecture2-summary.md)
+
+## Lecture 3: Similarity
+
+Topics: Function of similarity, measuring similarity, geometric models, featural models, structure alignment, transformational accounts
+
+- Slides in [PowerPoint](lecture3.pptx) format
+- Slides in [PDF](lecture3.pdf) format 
+- Lecture summary as [HTML document](lecture3-summary.html)
+- Lecture summary as [Markdown document](lecture3-summary.md)
+
+## Lecture 4: Reasoning
+
+Topics: Deductive reasoning, syllogisms, Wason selection task, inductive reasoning phenomena, argument from ignorance, circular reasoning
+
+- Slides in [PowerPoint](lecture4.pptx) format
+- Slides in [PDF](lecture4.pdf) format 
+- Lecture summary as [HTML document](lecture4-summary.html)
+- Lecture summary as [Markdown document](lecture4-summary.md)
+
+## Lecture 5: Case study
+
+Topics: Examine a single study, design, links to different phenomena, strengths and weaknesses
+
+- Slides in [PowerPoint](lecture5.pptx) format
+- Slides in [PDF](lecture5.pdf) format 
+- Lecture summary as [HTML document](lecture5-summary.html)
+- Lecture summary as [Markdown document](lecture5-summary.md)
+
+## Lecture 6: Summary
+
+- Slides in [PowerPoint](lecture6.pptx) format
+- Slides in [PDF](lecture6.pdf) format 
+

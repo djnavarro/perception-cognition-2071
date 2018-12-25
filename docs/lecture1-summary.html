@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>lecture1-summary</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Lecture 1: Introduction</h1>
+
+<p><em>[Disclaimer: These informal lecture notes are not intended to be comprehensive - there are some additional ideas in the lectures and lecture slides, textbook, tutorial materials etc. As always, the lectures themselves are the best guide for what is and is not examinable content. However, I hope they are useful in picking out the core content in each lecture.]</em></p>
+
+<h2 id="toc_1">Definitions</h2>
+
+<p>The lecture began with a slightly long-winded way of introducing these two &quot;definitions&quot; for perception and cognition. </p>
+
+<ul>
+<li><strong>Perception</strong> is concerned with how the mind interprets sensory data</li>
+<li><strong>Cognition</strong> is concerned with knowledge, reasoning, memory, language, decision making, etc</li>
+</ul>
+
+<p>To illustrate this definition, we used some empirical data (taken from De Deyne, Navarro &amp; Storms 2013) to map out the words that people associate with &quot;perception&quot; and &quot;cognition&quot;. The reason for doing this was partly because it&#39;s kind of neat to see the &quot;definition&quot; emerge from commonsense intuition (e.g., the word &quot;perception&quot; is associated with a cluster of words about &quot;sensation&quot; and another cluster of words about &quot;mind&quot;), but it&#39;s also a bit of foreshadowing - this kind of <em>semantic network</em> will appear later on in the cognition lecture stream in Prof. Taft&#39;s section.</p>
+
+<h2 id="toc_2">Historical background</h2>
+
+<ul>
+<li><p>Wilhelm Wundt founded the first experimental psychology lab in 1897 at the University of Leipzig. Used the method of <strong>introspection</strong> (subjective observation of one&#39;s own experiences) to investigate cognition</p></li>
+<li><p>In the early 20th century there was a backlash against this, mostly in the USA, leading to the rise of <strong>behaviourism</strong>, a school of thought that (led by researchers like John Watson and B.F. Skinner) disavowed any description of &quot;mental processes&quot; and insisted that psychology focus solely on describing the relationships between &quot;objective&quot; quanitites: stimuli and responses. Quote from J.B. Watson:</p></li>
+</ul>
+
+<blockquote>“Psychology as the behaviorist views it is a purely objective experimental branch of natural science. Its theoretical goal is the prediction and control of behavior. Introspection forms no essential part of its methods, nor is the scientific value of its data dependent upon the readiness with which they lend themselves to interpretation in terms of consciousness. The behaviorist, in his efforts to get a unitary scheme of animal response, recognizes no dividing line between man and brute.”</blockquote>
+
+<ul>
+<li><p>The behaviourist approach had many successes (beyond the scope of this class) but for our purposes the important point is to notice that there are two quite distinct claims that the behaviourists relied upon...</p>
+
+<ol>
+<li><strong>Methodological behaviourism</strong> - psychological theories should be based solely on objective empirical data and not upon subjective, personal intuitions. Our goal is the successful prediction and description of <em>observed behaviour</em>. In modern times this seems a bit limiting - now that we have other technologies such as EEG, fMRI, etc, it does seem a little odd to restrict ourselves to behavioural data, but the spirit of methodological behaviorism is really that our theories must be based on objective, empirically observable data. </li>
+<li><strong>Theoretical behavioursm</strong> (also referred to as radical behaviourism) makes a much stronger claim. It asserts that human behaviour is best understood in terms of &quot;stimulus-response associations&quot;. That is, the reason why we should restrict ourselves to describing S-R associations is that these really are the fundamental building blocks of human behaviour. To the radical behaviourist, cognition, thoughts, feelings beliefs, etc, these are all fundamentally unscientific concepts and should form no part of psychology. </li>
+</ol>
+
+<p>These days, almost everyone accepts some (suitably extended) version of methodological behaviourism. Very few people still subscribe to radical behaviourism.</p></li>
+</ul>
+
+<h2 id="toc_3">Some difficulties with behaviourism</h2>
+
+<p>One of the most influential criticisms of the radical behaviourist position occurred in the late 1950s when B.F. Skinner published <em>Verbal Behavior</em> in 1957. The key idea in the book was an attempt to describe how language might be &quot;trained&quot; via a process of operant conditioning. Leaving the particulars of Skinner&#39;s theory to one side, the main thing to note here is that he treated language as being no different to any other behaviour, a view that didn&#39;t go down well in linguistics. Noam Chomsky, who had published his own book <em>Syntactic Structures</em> in 1957 (which emphasised the importance of understanding the extraordinary amound of grammatical structure in human language), published a scathing review of <em>Verbal Behaviour</em> in 1959. There&#39;s quite a lot of ideas in those two publications by Chomsky, but several key points that he made were:</p>
+
+<ul>
+<li>children often blatantly ignore some kinds of parental &quot;reinforcement&quot; (e.g., correcting kids grammar rarely works)</li>
+<li>children understand the meanings of sentences they have never heard</li>
+<li>people can understand that completely new sentences can be grammatical while being totally nonsense (e.g., &quot;colourless green ideas sleep furiously&quot; is a novel sentence that is immediately recognisable as being meaningless and yet grammatical)</li>
+</ul>
+
+<p>The overall message underpinning these kinds of observations is that human language (and by exension, perhaps, many other phenomena in human behaviour) is highly structured, and is not completely under the control of &quot;the environment&quot;. Instead of thinking about the production of behaviour a &quot;simple&quot; mapping from <em>stimulus</em> to <em>response</em>, perhaps we should be thinking about what happens in betweebn the S and the R. Perhaps... we need to understand the thought processes that lie in between the two!</p>
+
+<h2 id="toc_4">Cognitivism and the &quot;computational metaphor&quot;</h2>
+
+<p>To contrast the two positions:</p>
+
+<ul>
+<li>Radical behaviourism: the contents of mind are unobservable, and therefore off-limits to science</li>
+<li>Cognitivism: the mind is a kind of unknown biological machine, and scientists may propose theories about its structure</li>
+</ul>
+
+<p>When we shift from a behaviourist to cognitivist perspective, the big question that we need to answer is &quot;what kind of machine are we talking about here?&quot; Our brains (and by extension, our minds) are terribly complicated things, and to make any progress in describing them in comprehensible ways, we&#39;ll need to rely on some simplifications, and maybe come up with a sensible &quot;language&quot; for describing what they&#39;re doing.</p>
+
+<p>With that in mind, much of the cognitive literature relies on something known as the <strong>computational metaphor</strong>. The key idea is to analyse the behaviour of the mind by considering the &quot;information processing steps&quot; it goes through in order to produce a response to a particular stimulus. From the lecture:</p>
+
+<ul>
+<li><p>“Information processing”: The computational metaphor suggests that we can use the language of “computing” to build “models”</p></li>
+<li><p>Why do this?</p>
+
+<ul>
+<li>Computational language is precise… we can generate empirically testable predictions (see: methodological behaviourism!)</li>
+<li>Computational language is flexible... so we can postulate hidden mechanisms and structure to cognitive processes (goes beyond radical behaviourism)</li>
+</ul></li>
+</ul>
+
+<p><strong>[A toy example]</strong> In the lecture we gave a very simple example of an information processing theory, one that proposes that people do &quot;mental multiplication&quot; by repeatedly adding numbers together (e.g., 7 * 4 is solved by doing 7+7=14, then doing 14+14=28). Mental arithmetic is actually much more complicated than this, but the point we wanted to make is that although this theory is inconsistent with <strong>radical behaviourism</strong> (because it speculates about the internal mental processes that the mind uses to produce a response &quot;28&quot; to a stimulus &quot;7 * 4&quot;), it is consistent with <strong>methodological behaviourism</strong> because it yields testable empirical predictions. For instance, it predicts that people should respond faster to 7 * 2 than to 7 * 4, because it requires fewer steps. Etc.</p>
+
+<h2 id="toc_5">Methodological examples</h2>
+
+<p>There are many different experimental methods used to investigate cognitive processes. Some common examples include:</p>
+
+<ul>
+<li>Accuracy of response</li>
+<li>Type of response</li>
+<li>Response time</li>
+<li>Neurological deficit</li>
+<li>Brain imaging</li>
+<li>Self-report</li>
+</ul>
+
+<p>The lecture slides have a bit more detail on this.</p>
+
+<h2 id="toc_6">Beware &quot;the laptop fallacy&quot;</h2>
+
+<p>Because cognitive theories tend to be &quot;information processing&quot; theories, and digital computers are a kind of &quot;information processing machine&quot;, there&#39;s a bit of a tendency for people to interpret the computational metaphor in an overly literal way. </p>
+
+<p>In lecture, I referred to this description by Robert Epstein in 2016: </p>
+
+<blockquote>
+“Computers, quite literally, process information – numbers, letters, words, formulas, images. The information first has to be encoded into a format computers can use, which means patterns of ones and zeroes (‘bits’) organised into small chunks (‘bytes’). On my computer, each byte contains 8 bits, and a certain pattern of those bits stands for the letter d, another for the letter o, and another for the letter g. Side by side, those three bytes form the word dog.”
+</blockquote>
+
+<p>This is a very heavily simplified description of how modern digital computers encode the text &quot;dog&quot;. However, there is a very extensive literature on how humans represent words, word spellings and word meanings that I won&#39;t go into here, but the short version of it is that the mind doesn&#39;t encode words the same way a computer does. On the basis of this, Epstein argues that the entirety of cognitive science is built on a terrible foundation:</p>
+
+<blockquote>“Our shoddy thinking about the brain has deep historical roots, but the invention of computers in the 1940s got us especially confused. For more than half a century now, psychologists, linguists, neuroscientists and other experts on human behaviour have been asserting that the human brain works like a computer.”</blockquote>
+
+<p>In other words, he argues that the computational metaphor is wrong because (among other things) the specific way in which a digital computer encodes &quot;dog&quot; is different from the way that the mind encodes &quot;dog&quot;. Is he right? I don&#39;t believe so, and I think Epstein is falling for something that I refer to as &quot;the laptop fallacy&quot;.</p>
+
+<p>To understand what&#39;s going on here, it&#39;s important to understand the distinction between the <em>theoretical idea of a computing machine</em>, and the very specific instantiation that your laptop embodies. In the abstract, a computing machine is simply anything that is able to process information in a sufficiently &quot;complicated&quot; way. There&#39;s a whole branch of mathematics that is devoted to making that idea precise, but for our purposes let&#39;s just note that there&#39;s such a thing as a &quot;Turing machine&quot;, an abstract notion of &quot;a machine that can do computations&quot;. You can build Turing machines out of lego, you can build them out of biologically inspired networks, you can even implement them as a tiling scheme in your bathroom floor (see lecture slides for pictures). Superficially, none of these &quot;machines&quot; are particularly similar to each other, and their real world behaviour can be very, very different to one another. But they <em>are</em> all Turing machines, they all process information, and they are all doing computation.</p>
+
+<p>There&#39;s a serious point to all this: </p>
+
+<ul>
+<li>the computational metaphor doesn&#39;t mean &quot;the brain is a lot like a laptop&quot;, because that&#39;s an absurd proposition and is easily falsified. </li>
+<li>what it does mean is, &quot;we can use the language of computer science and information theory to build good theories of human cognition&quot;.<br></li>
+</ul>
+
+<h2 id="toc_7">Marr&#39;s levels</h2>
+
+<p>All of that being said, there&#39;s a bit of a tension within the cognitive approach, between those who emphasise a &quot;bottom up&quot; view and those who emphasise a &quot;top down&quot; view:</p>
+
+<ul>
+<li>&quot;Bottom up&quot;: Cognition is a thing performed by the brain, and our theories of human cognition should informed by the biology of the brain. People who take this perspective emphasise the biological bases of behaviour. </li>
+<li>&quot;Top down&quot;: Cognition is a feature of intelligent agents, and our theories of cognition should be informed by understanding what intelligent agents do. People who take this perspective emphasise the connections between cognitive psychology and artificial intelligence.</li>
+</ul>
+
+<p>The tension exists, but it&#39;s mostly amicable: I belong to the latter group, but many of the neuro folks around UNSW belong to the former. We get along pretty well. </p>
+
+<p>One way of capturing the tension is via David Marr&#39;s (1980) three &quot;levels of explanation&quot;</p>
+
+<ol>
+<li><strong>Abstract computation</strong>: What problem does cognition solve?</li>
+<li><strong>Algorithm</strong>: What processing steps does it follow to do so?</li>
+<li><strong>Implementation</strong>: How is this instantiated as a physical entity?</li>
+</ol>
+
+<p>The lecture slides have a bit more detail on this.</p>
+
+
+
+
+</body>
+
+</html>

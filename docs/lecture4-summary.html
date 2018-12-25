@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>lecture4-summary</title>
+
+
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+html body {
+  background-color: #fdf6e3;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  color: #586e75;
+  background-color: #eee8d5;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Lecture 4: Reasoning</h1>
+
+<p><em>[Disclaimer: These informal lecture notes are not intended to be comprehensive - there are some additional ideas in the lectures and lecture slides, textbook, tutorial materials etc. As always, the lectures themselves are the best guide for what is and is not examinable content. However, I hope they are useful in picking out the core content in each lecture.]</em></p>
+
+<h2 id="toc_1">Introduction</h2>
+
+<p>The structure of the lecture comes in three parts...</p>
+
+<ul>
+<li>Deductive reasoning</li>
+<li>Inductive reasoning</li>
+<li>Informal reasoning</li>
+</ul>
+
+<p>... but as usual I&#39;ve motivated it with a William James quote:</p>
+
+<blockquote>
+<p>“We talk of man (sic) being the rational animal; and the traditional intellectualist philosophy has always made a great point of treating the brutes as wholly irrational creatures. Nevertheless, it is by no means easy to decide just what is meant by reason”</p>
+</blockquote>
+
+<p>... and as usual there&#39;s quite a lot going on here. </p>
+
+<h3 id="toc_2">What <em>is</em> reasoning?</h3>
+
+<p>Firstly, there&#39;s the question of what exactly do we <em>mean</em> when we talk about humans reasoning? </p>
+
+<ul>
+<li>I see that &quot;lemons are yellow&quot;</li>
+<li>I say that &quot;lemons taste a little bit like oranges&quot; </li>
+<li>I claim that &quot;lemons and oranges are both citrus&quot;</li>
+<li>I argue that &quot;because a slice of lemon goes well with a summer beer, I think that a slice of orange will also go well with a summer beer?&quot;</li>
+</ul>
+
+<p>It seems obvious that the last of these is indeed reasoning, and the first is probably not, but where is the dividing line, and what is it that makes the last one count as &quot;reasoning&quot;? </p>
+
+<p>Intuitively, it seems to be something like &quot;using what we do know (about lemons in beer) to make a reasonable inference about something that we do not know (about orange in beer)&quot;. Yet that seems a little unsatisfying... after all, you&#39;ve just been through a whole series of lectures on perception, and it&#39;s pretty obvious that the visual system actually does some pretty smart inference, using observable cues to make sensible inferences about the world. Why don&#39;t we count &quot;vision&quot; as a form of reasoning? In some ways, there&#39;s not that much of a difference between perceptual inferences (which we agree that many animals do just as well as we do) and &quot;higher&quot; reasoning (which we seem to think is special to humans, and perhaps to some extent genuinely is unique to us). </p>
+
+<p>James&#39; quote is touching on some of this tension, and the lecture goes on to highlight this tension in a few places, by noting some parallels between &quot;higher&quot; reasoning in humans and &quot;lower&quot; perceptual phenomena that seem to be pretty widespread.</p>
+
+<h3 id="toc_3">What counts as <em>good</em> reasoning?</h3>
+
+<p>The other undercurrent in the James quote, one that I don&#39;t really resolve in the lecture, is the question of what counts as <em>good</em> reasoning? In much of the historical literature on reasoning, there&#39;s a very strong presumption that some reasoning problems have clear &quot;right answers and wrong answers&quot;, yet it doesn&#39;t always work out that way in real life. Something that looks like &quot;good reasoning&quot; from one perspective can often look frightfully silly from another perspective. Some care is required when deciding who is reasoning &quot;well&quot; and who is not!</p>
+
+<p>These issues notwithstanding, it does seem like we can say something about the kinds of questions that we should be concerned with in the study of human reasoning:</p>
+
+<ul>
+<li>How is the truth of a claim established?</li>
+<li>What should we believe?</li>
+<li>Are there rules we should follow?</li>
+<li>What are these rules? (And do we follow them?)</li>
+</ul>
+
+<h3 id="toc_4">Deduction vs induction</h3>
+
+<p>One of the big distinctions we draw between kinds of reasoning refers to the difference between <em>induction</em> and <em>deduction</em>. </p>
+
+<ul>
+<li>Deductive reasoning: Using facts to reach a “logically certain” conclusion</li>
+<li>Inductive reasioning: Using facts to reach a “plausible” conclusion (allows room for doubt)</li>
+</ul>
+
+<p>Historically, deduction was considered the &quot;highest&quot; form of reasoning and induction considered less impressive. In more recent times, this is no longer the case -- because in real life the problems we tend to have to solve are inductive problems!</p>
+
+<h2 id="toc_5">Part 1: Deduction</h2>
+
+<p>For the most part, the study of reasoning focuses on how we make <em>arguments</em> to support a particular conclusion, and in everyday life an argument can be constructed in all sorts of ways. We write opinion pieces in newspaper columns, we make snarky tweets, we thump on tables to prove a point etc. </p>
+
+<h3 id="toc_6">On syllogisms</h3>
+
+<p>However, much of the literature (at least in the European and Anglophone traditions...) derives from the study of <strong>syllogisms</strong>, which try to &quot;formalise&quot; logical arguments. For instance, we might write a syllogism like this:</p>
+
+<div><pre><code class="language-none">All men are mortal
+Socrates is a man
+----------------------------
+Therefore, Socrates is mortal</code></pre></div>
+
+<p>The two statments above the line are the <strong>premises</strong>, and these are the facts that we <em>assume</em> to be true. Then, if we assume those two things are true, the argument asks us to accept that the <strong>conclusion</strong> (the statement below the line) is also true.</p>
+
+<p>In this particular argument, we have a <strong>major premise</strong> (all men are mortal) that asserts a general rule, a <strong>minor premise</strong> (Socrates is a man) that asserts a specific fact, and from these two premises we are asked to judge the truth or falseness of the conclusion.</p>
+
+<p>In many contexts in psychology, we tend to reframe the major premise as a conditional statement (i.e., an &quot;if X then Y&quot; statement), so we might write the same argument like this:</p>
+
+<div><pre><code class="language-none">If Socrates is a man, then he is mortal
+Socrates is a man
+----------------------------
+Therefore, Socrates is mortal</code></pre></div>
+
+<p>When written in this form, we can treat the major premise as having two parts, the <strong>antecedent</strong> (If Socrates is a man...), and the <strong>consequent</strong> (...then he is mortal). Depending on what the minor premise says, we can construct four distinct arguments:</p>
+
+<ul>
+<li><p>&quot;Affirming the antecedent&quot; (<em>modus ponens</em>, MP) occurs when the minor premise asserts that the antecedent is true (e.g., Socrates is a man). The argument above is MP.</p></li>
+<li><p>&quot;Denying the consequent&quot; (<em>modus tollens</em>, MT) occurs when the minor premise asserts that the consequent is false. An MT argument might look like this:</p>
+
+<div><pre><code class="language-none">If Socrates is a man, then he is mortal
+Socrates is not mortal
+----------------------------
+Therefore, Socrates is not a man</code></pre></div></li>
+</ul>
+
+<p>The critical point here is that MP and MT are both <em>valid</em> arguments: if you accept that the major and minor premises are both true, it is impossible for the conclusion to be false. </p>
+
+<p>In contrast, suppose we were to try the other way around? </p>
+
+<ul>
+<li>&quot;Denying the antecedent&quot; (DA) occurs when the minor premise assers that the antecedent is false. For instance, I might state that &quot;Socrates is a rock&quot;. That would give us this argument:</li>
+</ul>
+
+<div><pre><code class="language-none">If Socrates is a man, then he is mortal
+Socrates is a not a man (e.g., a rock)
+----------------------------
+Therefore, Socrates is not mortal</code></pre></div>
+
+<p>Clearly, we have an <em>invalid</em> argument here, insofar as the conclusion can be (and is!) false even though the premises are true. However, it&#39;s really important to notice that if I said &quot;Socrates is a cat&quot;, the resulting argument would still be invalid:</p>
+
+<div><pre><code class="language-none">If Socrates is a man, then he is mortal
+Socrates is my cat
+----------------------------
+Therefore, Socrates is mortal</code></pre></div>
+
+<p>Although cats are indeed mortal and so in this case it turns out that the conclusion is true, there is nothing about the <em>structure</em> of the argument that proves it to be true. The fact that Socrates is mortal is entirely incidental to the argument, and as such the argument is deductively invalid</p>
+
+<ul>
+<li>&quot;Affirming the consequent&quot; (AC) occurs when the minor premise asserts that the consequent is true, which also yields an invalid argument:</li>
+</ul>
+
+<div><pre><code class="language-none">If Socrates is a man, then he is mortal
+Socrates is mortal
+----------------------------
+Therefore, Socrates is a man</code></pre></div>
+
+<p>As the example of &quot;my cat&quot; illustrates, this argument doesn&#39;t work. There are mortal creatures that are not human, so this argument is deductively invalid. </p>
+
+<h3 id="toc_7">On the psychology of deductive reasoning</h3>
+
+<p>There is a large literature looking at how people evaluate deductive arguments, and the lecture only covers the basics. The very first study we talked about in the lecture, Barrouillet et al (2000), hinted that there are some differences between how kids reason about these problems and how adults do. In that study, adults seemed to be very good when the minor premise makes reference to the antecedent: so we notice that MP is valid and DA is invalid. In contrast, we are less sure when the minor premise refers to the consequent. In general, people are less sure whether MT arguments are valid, and less sure whether AC arguments are invalid. In contrast, children tend to adopt a simpler approach, and will agree with any argument that &quot;affirms&quot; either part of the major premise: so they tend to judge MP and AC as valid, and judge MT and DA as invalid. In short, even from the beginning of the lecture we had some hints that reasoning is tricky...</p>
+
+<h3 id="toc_8">The Wason selection task</h3>
+
+<p>Much of the literature stems from the &quot;selection task&quot; introduced by Wason (1968). In this task, people are told that they need to &quot;test&quot; a conditional rule. Imagine a set of cards with a letter on one side, and a number on the other. Suppose I assert that:</p>
+
+<blockquote>
+<p>If there is an R on one side of the card, then there is a 2 on the other</p>
+</blockquote>
+
+<p>Your job is to determine whether this rule is true. You are then shown four cards, one showing an R, another showing a G, the third showing a 2 and the last showing a 7. Which cards need to be turned over to test the rule? </p>
+
+<p>When these experiments are run, people tend to select the R and the 2. Intuitively, this feels sensible. Yet, suppose we were to write these as syllogisms. Here&#39;s what we get:</p>
+
+<div><pre><code class="language-none">If there is an R then there is a 2
+There is an R
+----------------------
+Therefore, there is a 2</code></pre></div>
+
+<p>This argument is &quot;modus ponens&quot; and it is deductively valid. If we were to turn over the R card and were to see something other than a 2, it <em>must</em> be the case that the rule were false. So this is a good card to choose.</p>
+
+<p>What about the 2 card? Well, if we write this as an argument we get this:</p>
+
+<div><pre><code class="language-none">If there is an R then there is a 2
+There is a 2
+----------------------
+Therefore, there is an R</code></pre></div>
+
+<p>This argument &quot;affirms the consequent&quot; and it is deductively invalid. If I turn over a 2 and see something other than an R, that <em>doesn&#39;t</em> tell me anything. Even if I did see an R, it doesn&#39;t <em>prove</em> anything. It&#39;s not immediately clear how selecting the 2 card is helpful... so it&#39;s initially somewhat puzzling that people tend to select it</p>
+
+<p>It&#39;s even more puzzling when you consider the fact that selecting the 7 card will produce a modus tollens argument, which is also deductively valid: </p>
+
+<div><pre><code class="language-none">If there is an R then there is a 2
+There is a 7
+----------------------
+Therefore, there is not an R</code></pre></div>
+
+<p>Because this argument is valid, we can potentially use it to <em>falsify</em> the rule -- that is, if we were to turn over the 7 card and discover an R there, we would be able to show that the rule is untrue.</p>
+
+<p>So what does this mean? There are three main ideas...</p>
+
+<h3 id="toc_9">Interpretation #1: People are stupid</h3>
+
+<p>The original interpretation of the Wason task was to suggest that people just aren&#39;t very good at deductive reasoning. After all, the &quot;hypothesis testing&quot; (rule testing) puzzle seems like the sort of deductive reasoning that we should be engaged in -- and indeed when he first proposed it Wason was influenced by prominent philosophers of science like Karl Popper who argued that scientists should be trying to falsify hypotheses -- and yet we don&#39;t do it. So maybe we&#39;re just not very smart...</p>
+
+<h3 id="toc_10">Interpretation #2: Deductive reasoning is stupid</h3>
+
+<p>An alternative possibility (which I didn&#39;t talk about much in the lecture but is mentioned in the textbook) was suggested by Mike Oaksford and Nick Chater in the late 1990s, arguing that the problem isn&#39;t with human reasoning, but with Wason&#39;s assumption that we <em>ought</em> to be doing deductive reasoning in this task. They argue that what people are actually trying to do is solve an <em>inductive</em> reasoning problem, in which the goal is to obtain the &quot;most possible information&quot; about whether the rule is true or false. There&#39;s a lengthy argument in their papers, and it involves more maths than is really appropriate for this class, but the short version is that under most &quot;real world&quot; assumptions about rules, it actually makes a lot of sense to pick the R and 2 cards - if you think of the task as a kind of &quot;question and answer game with nature&quot;, the R and 2 cards actually correspond to the most <em>informative</em> queries you can make. In any case, because the lecture doesn&#39;t talk much about this particular interpretation, I should move on to talk about...</p>
+
+<h3 id="toc_11">Interpretation #3: The task is stupid</h3>
+
+<p>One thing that is very obvious about the Wason task is that it feels a bit abstract and unnatural. In real life I don&#39;t usually reason about rules that pertain to cards that have letters and numbers printed on them. However, what I do spend a lot of time doing is checking to see if people are following social rules. So what happens if we reframe the selection task more in terms of a &quot;cheater detection&quot; problem? (Sperber &amp; Girotto 2002)</p>
+
+<p>More specifically, consider two different kinds of rules:</p>
+
+<ul>
+<li><strong>indicative conditionals</strong> (e.g., if it is Monday then I wear black) state an abstract regularity about the world that may or may not be true</li>
+<li><strong>deontic conditionals</strong> (e.g., if it is Monday then I MUST wear black) assert a social norm that I am expected to follow</li>
+</ul>
+
+<p>In lecture we talked about an example of a deontic task. Suppose you&#39;re working at a bar, and you need to ensure that no underage drinking of alcohol takes place. Here are four people. Who do you need to check?</p>
+
+<ul>
+<li>A 15 year old drinking something (but you don&#39;t know what)</li>
+<li>A 65 year old drinking something (but you don&#39;t know what)</li>
+<li>Someone drinking a cup of tea (but you don&#39;t know their age)</li>
+<li>Someone drinking a beer (but you don&#39;t know their age)</li>
+</ul>
+
+<p>It is immediately obvious in this situation that the people you need to be most worried about are the 15 year old and the beer drinker. When framed as arguments, we get...</p>
+
+<div><pre><code class="language-none">If Ms Polly is under-18 she must not drink beer
+Ms Polly is 15
+---------------------
+Therefore Ms Polly must not drink beer</code></pre></div>
+
+<p>Deciding to check her ID seems to be a form of modus ponens. Similarly, checking on the beer drinker appears to rely on modus tollens:</p>
+
+<div><pre><code class="language-none">If Mr Tim is under-18 he must not drink beer
+Mr Tim is drinking a beer
+---------------------
+Therefore Mr Tim must be 18 or over</code></pre></div>
+
+<p>Again, we have a deductively valid argument that appears to drive our behaviour.</p>
+
+<p>The key point here is that when framed in terms of a problem that we&#39;re very familiar with, people seem to do much better at the task. </p>
+
+<p>So it might be that the original version of the problem underestimates people&#39;s actual reasoning abilities? </p>
+
+<h3 id="toc_12">Mini summary</h3>
+
+<p>Logical reasoning</p>
+
+<ul>
+<li>Definitions of deductive and inductive reasioning</li>
+<li>Syllogisms and how they work</li>
+<li>Definitions of valid and invalid reasoning</li>
+<li>Four argument types: MP, MT, DA and DC</li>
+</ul>
+
+<p>Empirical evidence</p>
+
+<ul>
+<li>Developmental changes?</li>
+<li>Wason selection task</li>
+<li>Indicative vs deontic versions</li>
+</ul>
+
+<h2 id="toc_13">Part 2: Inductive reasoning</h2>
+
+<p>Inductive arguments rely on limited evidence to make a conclusion seem more plausible. We can again write them in the form of syllogisms...</p>
+
+<div><pre><code class="language-none">Socrates was mortal
+Aristotle was mortal
+Cicero was mortal
+-----------------
+Therefore all humans are mortal</code></pre></div>
+
+<p>Obviously, this isn&#39;t a deductively valid argument. We&#39;ve got three specific examples to work from, and there&#39;s no way we can <em>prove</em> a general rule from such little evidence. Even so, it does seem like a reasonable inference, especially if we have many many examples of humans that are mortal. However, there&#39;s never any guarantee that it will work. For instance, this...</p>
+
+<div><pre><code class="language-none">Socrates was male
+Aristotle was male
+Cicero was male
+-----------------
+Therefore all humans are male</code></pre></div>
+
+<p>... is rather silly.</p>
+
+<h3 id="toc_14">Phenomena in inductive reasoning</h3>
+
+<p>As mentioned in the lecture, and hinted at in my commentary on the William James quote above, the lecture on similarity did touch on inductive reasoning already: the fact that we use similarity to make judgments about the properties of novel objects (e.g., this tomato is edible because other tomatos were edible) is a form of inductive reasoning. </p>
+
+<p>In my experience, reading the literature on inductive reasoning has a slightly different &quot;feel&quot; to deductive reasoning. A lot of the way we talk about deductive problems tends to focus on whether people are doing it &quot;right&quot;. However, the main reason (in my personal opinion, at least) we can do this is that deductive reasoning is so simple that it&#39;s actually possible for us to <em>know</em> what is or is not &quot;correct&quot; deductive reasoning. However, almost every real world problem (e.g., what colour pants should I wear? What will the lecturer want me to write on an exam paper?) is an inductive problem, and it&#39;s never possible to know for sure what the right answer is. Inductive problems are <em>hard</em>... and as a consequence, the focus is less on trying to determing whether people are doing it right or wrong (though there is indeed quite a lot of that) the focus tends to be more on trying to <em>describe</em> the kind of inductions that people consider reasonable.</p>
+
+<p>In the lecture I referred to a study by Osherson et al (1990), a classic paper in the field that provided a long list of inductive phenomena. Three of them in particular we talked about in class:</p>
+
+<ul>
+<li><p><strong>Premise-conclusion similarity</strong>. An inductive argument feels stronger when the premise and the conclusion are similar. For instance, it feels more plausible to argue that &quot;<em>dolphins</em> possess the TH4 gene, therefore <em>seals</em> (probably) possess the TH4 gene&quot; than to argue that &quot;<em>dolphins</em> possess the TH4 gene, therefore <em>mice</em> (probably) possess the TH4 gene&quot;. As mentioned in the similarity lecture, this is what we use similarity for: things that are perceived to be similar are assumed to have more properties in common, so we are more willing to accept an inductive argument that pertains to two very similar entities.</p></li>
+<li><p><strong>Premise diversity</strong>. An inductive argument feels stronger when it is based on diverse evidence. If I tell you that <em>dolphins</em>, <em>whales</em> and <em>seals</em> all possess the TH4 gene, you would probably be unwilling to guess that <em>cats</em> possess the TH4 gene. In contrast, if I tell you that <em>dolphins</em>, <em>elephants</em> and <em>mice</em> all possess the TH4 gene, you might be more willing to endores the idea that <em>cats</em> have the gene. Again, this makes sense: in the first argument it seems most likely that TH4 is specific to marine mammals, whereas in the second argument it seems more likely to be a general property of mammals.</p></li>
+<li><p><strong>Premise monotonicity</strong>. An inductive argument feels stronger when it is based on more evidence. If I tell you that <em>cows</em> have the TH4 gene, you might be willing to conclude that <em>horses</em> do too, but you&#39;d probably be even more convinced if I told you that <em>elephants</em>, <em>sheep</em>, <em>zebras</em> and <em>dogs</em> all possess the TH4 as well. The more widespread the property seems to be, the more willing we become to believe that a newly encountered entity will share that property.</p></li>
+</ul>
+
+<p>Of course, these rules don&#39;t always hold. Not only are there exceptions to them, there are systematic exceptions, and there are some interesting tricks you can do to explore what those exceptions tell us about human reasoning (see next lecture!) But all else being equal these rules seem to hold in most cases. </p>
+
+<h3 id="toc_15">Mini summary</h3>
+
+<ul>
+<li>Difference between induction and deduction</li>
+<li>Phenomena in inductive reasoning
+
+<ul>
+<li>Premise-conclusion similarity</li>
+<li>Premise diversity</li>
+<li>Premise monotonicity</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_16">Part 3: Informal reasoning</h2>
+
+<p>A different line of research into human reasoning has tended to focus on the kinds of &quot;informal argumentation&quot; that we do in everyday life. That is, while some “reasoning fallacies” occur because people fail to follow deductive logic (e.g., denial of the antecedent is a logical fallacy), there are many other kinds of argument (e.g., argument from personal incredulity, argument ad hominem) that are fallacies for rather different reasons! In the third part of the lecture, we focused on two kinds of informal argument that are logically invalid, but nevertheless can be convincing to people sometimes... and not necessarily for bad reasons! </p>
+
+<p>The lecture here draws heavily from a paper by Ulrike Hahn and Mike Oaksford in 2007.</p>
+
+<h3 id="toc_17">Arguments from ignorance</h3>
+
+<p>The argument from ignorance asserts that</p>
+
+<blockquote>
+<p>“X must be true because you can’t prove X is false”</p>
+</blockquote>
+
+<p>Clearly this is deductively invalid. But does it have some degree of inductive strength? Can it be persuasive sometimes? And if people do find it persuasive sometimes, does that happen for a sensible reason?</p>
+
+<p>To illustrate that arguments from ignorance seem to vary in their persuasiveness, compare the following:</p>
+
+<ul>
+<li>&quot;Ghosts exist because there is no scientific proof that they do not&quot;</li>
+<li>&quot;There’s no Hatfield train stop in Sydney, because it&#39;s not shown the Metro map&quot;</li>
+</ul>
+
+<p>These are both arguments from ignorance. The ghosts argument (arguably correctly) states that there is no positive proof in the scientific literature of the impossibility of ghosts, and then asks us to believe that this constitutes evidence for the existence of ghosts. Most people find it implausible.</p>
+
+<p>The train stop argument states (correctly) that there is no postitive evidence of Hatfield on the Metro map, and then asks us to believe that this constitutes evidence for the non-existence of a Hatfield stop. Most people find it plausible.</p>
+
+<p>There are several differences between the two arguments, but one of the main ones is the <strong>epistemic closure</strong> assumption. The key idea here pertains to the &quot;knowledgeability&quot; or &quot;completeness&quot; of the evidence source. An epistemically closed source is one that contains all relevant facts... the Metro map is indeed epistemically closed (or at least we expect it to be). Transit authorities construct the maps in order to list <em>all</em> stops on the network... so the absence of a stop named &quot;Hatfield&quot; on the map actually is evidence that there is no such stop in the world. If there <em>were</em> such a stop in Sydney, we&#39;d expect it to be on the map (epistemic closure), so the argument from ignorance is actually pretty compelling.</p>
+
+<p>In contrast, consider the ghosts argument. The source here is the &quot;scientific literature on ghosts&quot;, and it&#39;s not really epistemically closed. There isn&#39;t a very large literature on ghosts, and even if there were, I&#39;m not sure I&#39;d expect it to contain a proper &quot;proof&quot; that ghosts are impossible. So the absence of any such proof really doesn&#39;t tell me very much.</p>
+
+<p>In the lecture, I mention a study (Oaksford &amp; Hahn 2004) that illustrates that people really are sensitive to the kinds of things that we &quot;ought&quot; to be sensitive to (e.g., epsitemic closure) when evaluating arguments from ignorance, suggesting that there is often a very sensible basis for these arguments.</p>
+
+<h3 id="toc_18">Circular arguments</h3>
+
+<p>A circular argument involves</p>
+
+<blockquote>
+<p>“Assuming that X is true in order to prove that X is true”</p>
+</blockquote>
+
+<p>and it&#39;s surprisingly common in everyday life. In lecture, I listed three examples:</p>
+
+<ul>
+<li>God exists because the Bible says so, and the Bible is the word of God</li>
+<li>Inductive reasoning is justified because it has worked in the past, so it will work in the future</li>
+<li>Electrons exist because we can see 3-cm tracks in a cloud chamber, and 3-cm tracks in a cloud chamber are the signatures of electrons</li>
+</ul>
+
+<p>In the first case I assume Christian theology to prove Christian theology; in the second I assume inductive reasoning works in order to prove that inductive reasoning works; and in the third case I use the theory of particle physics to prove the theory of particle physics. All of these are &quot;circular&quot;. So why do we make these arguments all the time? </p>
+
+<p>Part of the answer can be found by noting that our own perceptual system &quot;falls&quot; for circular arguments. Consider the Kanizsa triangle illusion (see slide 93 for the picture). If we wrote it out as an argument, it would look like this...</p>
+
+<ul>
+<li>There is a white triangle because it is blocking the black circles and the black triangle ... and we assume there’s a black triangle and black circles because there’s a white triangle blocking them</li>
+</ul>
+
+<p>... which is so obviously a circular argument that there must be a more sensible answer to &quot;why do we do this?&quot; than merely to assert &quot;people aren&#39;t good at reasoning&quot;. After all, our visual systems are rather good at &quot;seeing&quot;, so maybe some of what we&#39;re doing with circular arguments is kind of smart?</p>
+
+<p>What Hahn &amp; Oaksford (2007) argue is that a circular argument is implicitly an &quot;appeal to an explanatory system&quot;. Whenever we&#39;re asked to accept a circular argument, what we&#39;re really being asked to do is believe that the &quot;explanatory system&quot; in question provides the best account of the observed facts. For the religious and scientific examples above, the arguments can be rewritten like this:</p>
+
+<ul>
+<li>(God and Bible) are part of an explanatory system called &quot;Christianity&quot;, and the argument asks you to accept that the Christian faith provides the best explanation for the observations under discusion</li>
+<li>(Particle physics and cloud chamber experiments) are part of an explanatory system called &quot;physics&quot;, and the argument asks you to accept that physics provides the best explanation for the observations under discussion</li>
+</ul>
+
+<p>Neither of these is self-evidently wrong (or right). They are inductive arguments, and they should be evaluated as such. One test of the idea that this is how people actually think about circular arguments is to supply people with a plausible (or implausible) alternative to the circular argument. If there is a <em>better</em> explanation available, then the circular argument should seem weak. If there is no plausible alternative, then the circular argument should seem more reasonable. Hahn &amp; Oaksford tested this by presenting people with dialogues such as this one:</p>
+
+<div><pre><code class="language-none">John:   I think there’s a thunderstorm
+Anne:   What makes you think that?
+John:   I just heard a loud noise that could have been thunder
+Anne:   That could have been an airplane
+John:   I think it was thunder, because I think it’s a thunderstorm
+Anne:   Well, it has been really muggy around here today</code></pre></div>
+
+<p>Clearly, John&#39;s argument is circular, but do people find it reasonable or acceptable? In one condition of the experiment, participants were told that <em>&quot;John and Anne are in their trailer home near the airport&quot;</em>, which makes Anne&#39;s airplane argument seem more plausible; in the other condition, they were told that <em>&quot;John and Anne are in their camper van at their woodland campsite”</em> which makes Anne&#39;s argument seem much less plausible. What they found is that people rated John&#39;s argument as stronger when Anne&#39;s alternative was implausible.</p>
+
+<h3 id="toc_19">Mini-summary</h3>
+
+<ul>
+<li>“Rational” explanations of fallacies?</li>
+<li>Examples:
+
+<ul>
+<li>Argument from ignorance (epistemic closure)</li>
+<li>Circular arguments (appeal to explanatory system)</li>
+</ul></li>
+</ul>
+
+
+
+
+</body>
+
+</html>

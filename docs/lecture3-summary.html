@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>lecture3-summary</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Lecture 3: Similarity</h1>
+
+<p><em>[Disclaimer: These informal lecture notes are not intended to be comprehensive - there are some additional ideas in the lectures and lecture slides, textbook, tutorial materials etc. As always, the lectures themselves are the best guide for what is and is not examinable content. However, I hope they are useful in picking out the core content in each lecture.]</em></p>
+
+<h2 id="toc_1">Part 1: Introduction</h2>
+
+<p>As always, we open with a William James quote. This time, we have James arguing referring to the idea that different thoughts, objects, entities and events have a certain &quot;sameness&quot; or similarity to them, and that</p>
+
+<blockquote>
+<p>this sense of Sameness is the very keel and backbone of our thinking</p>
+</blockquote>
+
+<p>The idea is kind of intuitively plausible. In everyday life we so often say things like &quot;oh, X is like Y&quot; with a very particular goal in mind, namely to use what we already know about Y as a method for making good guesses about (or to learn about) X. Sometimes this kind of &quot;analogical reasoning&quot; is done explicitly, but most of the time we&#39;re just relying on the similarities that just automatically come to mind out at us (e.g., this morning is like yesterday morning, so I should probably go through the same routines as I went through yesterday)</p>
+
+<h3 id="toc_2">Similarity is flexible</h3>
+
+<p>In in the opening slides, I try to highlight some of the ways in which our &quot;sense of similarity&quot; is actually a pretty flexible and slippery thing, as it seems to cover some quite disparate things:</p>
+
+<ul>
+<li>These leaves are all green (low level perceptual match)</li>
+<li>This human looks like that cat (high level perceptual match)</li>
+<li>This book about Star Trek is like that picture of Star Trek (conceptual match across different formats)</li>
+<li>This book about The Culture is like that book about Star Trek (conceptual match within the same format)</li>
+<li>DNA is like a zipper (similarity based on physical property)</li>
+<li>DNA is like a blueprint (similarity based on functional role)</li>
+</ul>
+
+<p>Each of these could quite legitimately be thought of as &quot;similarity&quot; but they&#39;re all rather different to each other. As with many things in cognition, similarity isn&#39;t really &quot;one&quot; thing, it&#39;s lots of different things that are ... um... well... similar to one another.</p>
+
+<h3 id="toc_3">Similarity is useful</h3>
+
+<p>Okay, so if similarity refers to this variety of closely linked phenomena, what is it there for? The key idea that reappears throughout the literature on psychology, philosophy and other disciplines, is that similarity is there to help us cope with the &quot;snowflake problem&quot;... namely the fact that everything in the world is unique in some sense. As noted in the slides:</p>
+
+<ul>
+<li>No two people are the same</li>
+<li>No two events are the same</li>
+<li>No two objects are the same</li>
+<li>Nothing is <strong>literally</strong> the same as anything else</li>
+</ul>
+
+<p>Because everything is unique, you will never encounter a situation in life where your previous experience tells you exactly what you need to know. We&#39;re always guessing. Similarity is there to help us make these guesses.</p>
+
+<p>To highlight this, I referred to a couple of quotes by W.V.O Quine (an influential philosopher) and Greg Murphy (one of the top researchers in the psychology of concepts and reasoning), that are worth reproducing in full. From Quine (1969):</p>
+
+<blockquote>
+<p>“Similarity, is fundamental for learning, knowledge and thought, for only our sense of similarity allows us to order things into kinds so that these can function as stimulus meanings. Reasonable expectation depends on the similarity of circumstances and on our tendency to expect that similar causes will have similar effects” </p>
+</blockquote>
+
+<p>From Murphy (2002):</p>
+
+<blockquote>
+<p>&quot;Although I’ve never seen this particular tomato before, it is probably like other tomatoes I have eaten and so is edible.&quot;</p>
+</blockquote>
+
+<h3 id="toc_4">How do we measure similarity?</h3>
+
+<p>The lecture lists several different methodologies:</p>
+
+<ul>
+<li>Confusability: probability of mistaking A for B</li>
+<li>Reaction time: time taken to distinguish A from B</li>
+<li>Forced choice: is X more like A or more like B?</li>
+<li>Likert scales: how similar is A to B?</li>
+</ul>
+
+<p>Very often in the literature psychologists tend to treat each of these as measuring the &quot;same&quot; notion of similarity, but it is important in practice to recognise that different methods elicit slightly different notions of &quot;similarity&quot;</p>
+
+<p>Example: A reaction time task can be heavily influenced by visual pop-out effects (see lecture 2, visual search), whereas a Likert scale rating task is generally less influenced by those factors because it doesn&#39;t require people to make judgments quickly.</p>
+
+<h2 id="toc_5">Part 2: Simple theories of similarity</h2>
+
+<h3 id="toc_6">Geometric models</h3>
+
+<p>One of the earliest and most influential approaches to stimulus similarity is the &quot;geometric approach&quot;. The idea was prominently advocated by researchers like Roger Shepard in the 1970s and later, but you can trace back the history of the idea to methodological tools for &quot;multidimensional scaling&quot; (don&#39;t worry, you don&#39;t need to know this term) going back at least to the 1930s. </p>
+
+<p>The simplest way to think about it is in terms of objects that possess multiple characteristics. For instance, colours are often represented in terms of <em>hue</em>, <em>saturation</em> and <em>value</em> (HSV), though there are more sophisticated ways of describing human colour perception (e.g. <a href="https://en.wikipedia.org/wiki/Lab_color_space">CIELAB colour space</a>). More generally though, you could imagine that I think about a ball using perceptual dimensions like <em>size</em>, <em>weight</em> etc. So when thinking about the similarity between a tennis ball and a cricket ball, I might assess the <em>distance</em> between them (in &quot;ball space&quot;) by comparing the differences in their sizes, the differences in their weight, etc. </p>
+
+<p>The critical idea in this approach is the claim that these &quot;psychological spaces&quot; can be thought of as if they were geometric entities, and if so then ideas like &quot;distance&quot; should be (a) meaningful, and (b) closely related to &quot;similarity&quot;. Entities that are near each other within psychological space (e.g., <em>yellow</em> is near <em>orange</em>) are treated as similar, whereas entities that are far apart (e.g., <em>orange</em> is distant from <em>purple</em>) are treated as dissimilar.</p>
+
+<p>The idea is intuitively plausible, and there&#39;s some evdience for it. In the lecture, we talked about Shepard&#39;s &quot;universal law of generalisation&quot; which proposes that there is a consistent relationship between &quot;distance in psychological space&quot; and the &quot;probability of generalising from one thing to another&quot; (e.g., if this yellow fruit is poisonous, what is the probability that this orange fruit is also poisonous?) Across a pretty wide range of data sets, covering different species, sensory modalities and stimulus sets, there seems to be a consistent pattern, in which the shape of the relationship between the two looks like an exponential decay (see slides 45-46)</p>
+
+<h3 id="toc_7">Featural models</h3>
+
+<p>The geometric approach does have some problems, however. For instance, one problem is that it makes a strong claim that similarity should be <em>symmetric</em>: yellow should be as similar to orange as orange is to yellow. When we&#39;re talking about colours that seems to make sense, but as we talked about in lecture, there are exceptions. Which is more &quot;natural&quot; to say:</p>
+
+<ul>
+<li>&quot;A horse is like an okapi&quot; OR &quot;An okapi is like a horse&quot;</li>
+<li>&quot;Earth is like Venus&quot; OR &quot;Venus is like Earth&quot;</li>
+<li>&quot;A bird is like a bat&quot; OR &quot;A bat is like a bird&quot;</li>
+</ul>
+
+<p>As these examples illustrate (see also the pictures in the slides), we have a definite preference to say <em>[unusual thing] is like [usual thing]</em> or to say <em>[unfamiliar thing] is like [familiar thing]</em>. A geometric approach can&#39;t easily explain this, because the distance from A to B is always the same as the distance from B to A.</p>
+
+<p>To address this, Amos Tversky proposed a &quot;featural&quot; approach to similarity. Tversky&#39;s idea was that we mentally represent objects in terms of discrete &quot;features&quot; that they either possess or do not possess. For instance, a horse <em>&quot;has hooves&quot;</em>, <em>&quot;is quadrupedal&quot;</em>, etc. When we start thinking about mental representation in this way, we notice that for some entities, we have very detailed representations: we can easily list of many many features of horses, but comparatively few for okapis. Similarly, we know a lot about the planet Earth, and much less about Venus. We know more about birds than about bats. And so on. According to the featural approach, it is this asymmetry that produces asymmetric similarity. </p>
+
+<p>Example: Here are some things I know about Tyrannosaurus Rex...</p>
+
+<ul>
+<li>a dinosaur</li>
+<li>a predator</li>
+<li>big</li>
+<li>was in Jurassic Park</li>
+<li>Sue the T. Rex is a famous skeleton</li>
+<li>there was a band called T. Rex</li>
+<li>had tiny arms</li>
+</ul>
+
+<p>In comparison, here&#39;s what I know about Allosaurus</p>
+
+<ul>
+<li>a dinosaur</li>
+<li>a predator</li>
+<li>big</li>
+<li>is not a T. Rex</li>
+</ul>
+
+<p>When you compare these two lists, notice that there are 3 <em>common features</em> shared by both T. Rex and Allosaurus. However, while I can think of 4 <em>distinctive features</em> that a T. Rex possesses, I can only think of a 1 for Allosaurus.</p>
+
+<p>Tversky&#39;s idea, then, is that when I ask &quot;is an Allosaurus like a T. Rex&quot;, I focus on the second list, and I notice that 75% (3 out of 4) of the features possessed by an Allosaurus are also possessed by T. Rex... so I judge them to be very similar. However, when I ask &quot;is a T. Rex like an Allosaurus&quot; I focus on the first list, and only 43% (3 out of 7) T. Rex features are also possessed by Allosaurs, and so I judge them to be less similar. </p>
+
+<h2 id="toc_8">Part 3: Structured models of similarity</h2>
+
+<p>The geometric approach and the featural approach are somewhat different to each other, but they&#39;re both &quot;simple&quot; theories of similarity in the sense that they describe similarity in terms of fairly simple mental representations (dimensions &amp; features). More recent theories have tended to emphasise the fact that our mental models of the world tend to be a lot more <em>structured</em> than this, and this structure shapes the way we perceive similarity. In the lecture we talked about two different ideas about how this could matter. </p>
+
+<h3 id="toc_9">Structure alignment</h3>
+
+<p>The &quot;structure alignment&quot; view emphasises the fact that our mental models of entities don&#39;t merely list &quot;features&quot;. Rather, we also acknowledge that these features attach to a particular &quot;role&quot; or &quot;slot&quot;. For instance, that list of Allosaurus features I gave above should probably have been written more like this:</p>
+
+<ul>
+<li>biological category: dinosaur</li>
+<li>biological role: predator</li>
+<li>size: big</li>
+</ul>
+
+<p>In and of itself, this doesn&#39;t seem all that important, but as we noted in the lecture, it does lead to some neat predictions. Consider the &quot;cartoon bugs&quot; on slides 62-70, which can be described using the following structured lists:</p>
+
+<div><pre><code class="language-none">Bug A {
+  head: yellow
+  body: brown
+  wings: blue
+}
+
+Bug B {
+  head: yellow
+  body: green
+  wings: blue
+}
+
+Bug C {
+  head: green
+  body: yellow
+  wings: blue
+}</code></pre></div>
+
+<p>As we showed in the lecture, most people intuitively think Bugs A and B are more similar to each other than Bugs A and C. All three bugs are composed of the same three body parts (<em>head</em>, <em>body</em>, <em>wings</em>) and match on two of the three colours (<em>yellow</em> and <em>blue</em>), yet we intuitively feel that the fact that Bugs A and B both have <em>yellow heads</em> is important, and so we judge these to be more similar. </p>
+
+<p>This leads to the terminology:</p>
+
+<ul>
+<li>A <em>match in place</em> (MIP): occurs when two objects have the same feature (yellow) in the same slot (head).</li>
+<li>A <em>match out of place</em> (MOP): occurs when two objects share a feature (yellow), but it occurs in different places (head vs body)</li>
+</ul>
+
+<p>In lecture, we described an experiment by Rob Goldstone (1994) in which he systematically manipulated the number of MIPs and MOPs shared by different objects, and showed that both kinds of match will tend to increase the perceived similarity between entities; but that the effect of MIPs is much larger than the effect of MOPs. </p>
+
+<p>The conclusion from this kind of study is that the &quot;structure&quot; (i.e., the manner in which features are bound together into object representations - compare to the &quot;feature binding&quot; comments in the attention lecture) of an object plays a very important role in shaping how we perceive its similarities to other objects.</p>
+
+<h3 id="toc_10">Transformation</h3>
+
+<p>The final idea we talked about is the notion of stimulus <em>transformation</em>. According to this theory, the main idea is that &quot;similarity mirrors processes&quot;, in the following sense - when we assess the similarity between two entities, we are sensitive to the number of &quot;mental operations&quot; that are required to transform one object into another. These kinds of mental operations don&#39;t necessarily have to be physically possible (e.g., in lecture I gave a silly example where &quot;delete human&quot; and &quot;add cat&quot; were listed as mental transformations), just easily imagined. For visual stimuli, the idea is not dissimilar to a kind of mental &quot;photoshop&quot;. In real life, transforming a short person into a tall person would be terribly difficult if not impossible - but as a mental transformation it&#39;s not too difficult to do at all. </p>
+
+<p>The transformational approach leads to some unique predictions of its own. For instance, consider these two bug stimuli:</p>
+
+<div><pre><code class="language-none">Bug A {
+  head: yellow
+  body: yellow
+}
+
+Bug B {
+  head: yellow
+  body: blue
+}</code></pre></div>
+
+<p>If I wanted to transform Bug A into Bug B using a typical image manipulation program like photoshop, it would take two steps -- I&#39;d first have to &quot;create&quot; blue (by selecting it from the palette), and then I&#39;d have to &quot;fill&quot; the body with this colour. Going the other way (turning B into A), however, only takes one step: because the image of Bug B already has yellow in it, I can go straight to &quot;filling&quot; the body with yellow.</p>
+
+<p>Admittedly, in real photo editing it&#39;s a bit messier than this story, and of course real world similarity judgment is also messier than this, but hopefully you can get a sense of what the theory implies... Among other things it offers an explanation of asymmetric similarity. If it&#39;s easier to transform A into B than vice versa, it means we will perceive the similarity from A to B as higher than the similarity from B to A. </p>
+
+<p>In the lecture, I described an experiment that aimed to test this idea (Hodgett &amp; Hahn 2012 - see slide 92 in particular) in which they showed exactly this effect on reaction times. In their task, they presented one stimulus (A) on screen briefly, then replaced it with another one (B) shortly afterwards and asked people to judge if it was the same object or a different one. The experiment included many different pairs of stimuli, and (of course) on half the trials the second stimulus was the same as the first one (so you can&#39;t guess!). Critically, the design included cases where the sequence went from A to B, and other trials with the same two items in reverse order (from B to A). The items A and B were chosen so that one direction was predicted to be &quot;shorter&quot; (i.e., fewer transformations, higher similarity) than the other; and what they found was that people were slightly slower (about 12ms) to perceive the difference in those cases, suggesting that the transformational theory does successfully predict asymmetric similarities.</p>
+
+<h2 id="toc_11">Summary</h2>
+
+<ul>
+<li>Intro
+
+<ul>
+<li>What similarity is</li>
+<li>How it is measured</li>
+</ul></li>
+<li>Geometric similarity
+
+<ul>
+<li>“Universal” law of generalisation</li>
+<li>Symmetry prediction</li>
+</ul></li>
+<li>Featural similarity
+
+<ul>
+<li>Asymmetry due to different knowledge</li>
+</ul></li>
+<li>Structure alignment
+
+<ul>
+<li>MIPs and MOPs</li>
+<li>Goldstone experiment</li>
+</ul></li>
+<li>Stimulus transformation
+
+<ul>
+<li>Asymmetry due to different structure</li>
+<li>Hodgetts &amp; Hahn experiment</li>
+</ul></li>
+</ul>
+
+
+
+
+</body>
+
+</html>

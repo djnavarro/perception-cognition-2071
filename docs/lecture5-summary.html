@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>lecture5-summary</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Lecture 5: Case study</h1>
+
+<p><em>[Disclaimer: These informal lecture notes are not intended to be comprehensive - there are some additional ideas in the lectures and lecture slides, textbook, tutorial materials etc. As always, the lectures themselves are the best guide for what is and is not examinable content. However, I hope they are useful in picking out the core content in each lecture.]</em></p>
+
+<h2 id="toc_1">Introduction</h2>
+
+<p>The lecture series up to this point has followed a pretty typical structure. After the introductory lecture, each of the three main &quot;topic&quot; lectures picked out a single aspect of cognition and discussed some of the key ideas relating to each of them:</p>
+
+<ul>
+<li>Attention</li>
+<li>Similarity</li>
+<li>Reasoning</li>
+</ul>
+
+<p>Throughout, I&#39;ve tended to avoid going into detail about the specific methodology used in each experiment, preferring to focus on core ideas and theories. </p>
+
+<p>Obviously, these are only a few topics in cognitive psychology. Every textbook will cover many more topics, and later on in this class other lecturers will extend the topic list beyond these.</p>
+
+<p>In any given one of these lectures, I&#39;ve tried to highlight how it relates to many different tasks. For example, in the reasoning lecture I talked about the Wason selection task, property induction (inductive arguments), etc. </p>
+
+<p>In today&#39;s lecture, I want to &quot;reverse&quot; this structure, picking a single research paper and talking about how it ties together different thoughts about attention, similarity and reasoning. In the process, we&#39;ll bring in some ideas about social cognition, learning and so on. In a somewhat self-serving move, I&#39;ve selected one of my own papers that came out last year:</p>
+
+<ul>
+<li>Ransom, K., Perfors, A. and Navarro, D.J. (2016). Leaping to conclusions: Why premise relevance affects argument strength <em>Cognitive Science, 40</em>, 1775-1796. <a href="http://dj-navarro.appspot.com/docs/RansomNP_induction.pdf">paper</a></li>
+</ul>
+
+<p>You aren&#39;t expected to read the original paper for this class, but if you&#39;re interested, I&#39;ve included the link.</p>
+
+<h2 id="toc_2">Background</h2>
+
+<p>In our discussion of inductive reasoning we discussed the idea of <strong>premise monotonicity</strong>, which roughly corresponds to the very intuitive idea that &quot;adding more facts should strengthen an argument&quot;! As an example, this argument</p>
+
+<blockquote>
+<p>Dolphin cells contain TH4 hormone <br>
+Therefore cow cells contain TH4 hormone</p>
+</blockquote>
+
+<p>feels much weaker than this one:</p>
+
+<blockquote>
+<p>Dolphin cells contain TH4 hormone <br>
+Mouse cells contain TH4 hormone <br>
+Bat cells contain TH4 hormone <br>
+Therefore cow cells contain TH4 hormone?</p>
+</blockquote>
+
+<p>And as usual, we should note that this phenomenon isn&#39;t restricted to &quot;arguments that are explicitly written as syllogisms&quot;, you can see something pretty similar in everyday arguments and conversations too. As a general rule, more evidence is better.</p>
+
+<p>Except... not always. Consider this pair of arguments. As before, our &quot;baseline&quot; argument is this one:</p>
+
+<blockquote>
+<p>Dolphin cells contain TH4 hormone <br>
+Therefore cow cells contain TH4 hormone</p>
+</blockquote>
+
+<p>But this time around, the two &quot;new&quot; facts that we will introduce happen to pertain to other marine mammals:</p>
+
+<blockquote>
+<p>Dolphin cells contain TH4 hormone <br>
+Whale cells contain TH4 hormone <br>
+Seal cells contain TH4 hormone <br>
+Therefore cow cells contain TH4 hormone?</p>
+</blockquote>
+
+<p>Intuitively, this argument seems to feel much <em>weaker</em> than the original one. This phenomenon is referred to as <strong>premise non-monotonicity</strong> (adding more examples weakens the strength of the argument), and it tends to appear in situations where all of the premise items are all similar to another in a very particular way. </p>
+
+<h2 id="toc_3">A theoretical perspective</h2>
+
+<p>Premise non-monotonicity is a rather curious thing. It appears to be a phenomenon in which all three of our lectures seem relevant: when a particular pattern of <strong>similarity</strong> appears (<em>dolphin</em>, <em>whale</em>, <em>seal</em>), it seems to call our <strong>attention</strong> to a particular category (<em>marine mammals</em>), and this in turn drives the way we <strong>reason</strong> about the situation. Here&#39;s what I mean. From the lecture slides, we have the following observations:</p>
+
+<h3 id="toc_4">(1) Similarity shapes reasoning:</h3>
+
+<ul>
+<li><p>Dolphins and cows are dissimilar. So it feels unreasonable to generalise from one to the other. We&#39;ll denote this argument as <code>dolphins -&gt; cows</code></p></li>
+<li><p>Bats and mice are dissimilar to cows and to dolphins. So when we add those to the argument we obtain <code>(dolphins + bats + mice) -&gt; cows</code> and it feels like a much stronger argument. The fact that the property (TH4 hormone) is common to such a diverse set of animals makes it seem like it must be pretty widespread across mammals, so the generalisation to cows is sensible</p></li>
+<li><p>Seals and whales are <em>dissimilar</em> to cows, but they are <em>similar</em> to dolphins. So if we added those items to the argument we obtain <code>(dolphins + seals + whales) -&gt; cows</code> and that seems to suggest that TH4 is restricted to marine mammals, thereby undermining the argument that the property should be generalised to cows.</p></li>
+<li><p>On the other hand, if we switched to conclusion item from cows to a marine mammal like dugong, we get a very strong argument indeed <code>(dolphins + seals + whales -&gt; dugongs</code>. In this case, the very tight similarity among all four items seems to yield the strongest arguent of the lot.</p></li>
+</ul>
+
+<h3 id="toc_5">(2) Similarity directs attention:</h3>
+
+<ul>
+<li><p>In order to understand what&#39;s going on consider the features that <em>dolphins</em> have. A dolphin is &quot;a marine mammal&quot;, an &quot;intelligent animal&quot;, a &quot;mammal&quot;, a &quot;cute entity&quot;, etc. Each of these features implies a <em>category</em> that I might want to generalise TH4 to. Perhaps TH4 is a hormone associated with temperature regulation, which suggests mammals; or maybe it generates big googly-eyed baby faces that humans find &quot;cute&quot; (or whatever). The scientific details of what TH4 might correspond to don&#39;t really matter so much as what kind of category I can <em>imagine</em> connecting the TH4 hormone to. </p></li>
+<li><p>Adding extra premises to the argument helps direct my attention (internally!) to one category or another. Bats are not cute, mice are not smart, and neither one lives in the ocean, so the most plausible category for me to imagine when given those three examples is <em>mammal</em>. In contrast, when I select many marine mammals, my attention is driven to the narrowest everyday category that seems to cover all of them: <em>marine mammals</em>. The strength of the inductive argument seems to be tied to <em>which</em> category our attention is drawn to. If we are called to think about a category that includes the conclusion item (e.g., <em>dugongs</em> are marine mammals), it feels like a strong argument; if the attended category does not include the conclusion item (e.g., <em>cows</em> are not marine mammals) the argument feels weak.</p></li>
+<li><p>Notice that seals and whales are also intelligent cute mammals. These possibilities aren’t ruled out by the additon of extra evidence, it just encourages us to ignore or disregard those possibilities. </p></li>
+</ul>
+
+<p>Which leads to the question...</p>
+
+<h3 id="toc_6">Why does this happen?</h3>
+
+<p>There are several possibilities for why this happens, but the one that we focused on in the Ransom et al (2016) paper is the idea that in everyday life <em>arguments are made by other people</em>, and other people have a vested interest in communicating their ideas to you. Unlike nature (which is dumb and unhelpful), humans are intelligent agents with complex goals and a rich language. We “transmit” information to each other via a complicated mechanism... we aim to <em>persuade</em> each other of the truth or falsity of different ideas. This has an effect on the evidentiary value of a &quot;human uttered statement&quot;, when compared to the evidentiary value of a &quot;fact sampled randomly from the world.</p>
+
+<p>Here&#39;s how it works...</p>
+
+<ol>
+<li>Suppose I want to persuade you to believe that dugongs produce TH4 hormone. </li>
+<li>I might think well, if I choose these similar animals (dolphins &amp; whales), I can assume that you are not stupid, and you will notice this similarity. </li>
+<li>I can also assume that you will notice that the common feature between them is &quot;marine mammals&quot;. </li>
+<li>On your end of the &quot;communication channel&quot;, you <em>know</em> that I know this. You can assume that I <em>wanted</em> you to think of marine mammals, so you can assume that this similarity is <em>relevant</em>, and so...</li>
+<li>You can take a hint. </li>
+</ol>
+
+<p>... all of which highlights the importance of <strong>theory of mind</strong>. We We have intuitive theories about the workings of each other’s minds, so we can select relevant information that drives attention to the right answer.</p>
+
+<p>It relies on an assumption that we are being <em>helpful</em> to one another. That is, it is perfectly reasonable human behaviour to tell as story like this....</p>
+
+<blockquote>
+<p>“I’ve studied TH4 hormone for many years… and I have discovered it in the cells of whales, seals and dolphins. I want you to believe that dugongs will produce TH4 hormone&quot;</p>
+</blockquote>
+
+<p>It is also perfectly reasonable human behaviour to tell a story like this...</p>
+
+<blockquote>
+<p>&quot;I’ve studied TH4 hormone for many years… and I have discovered it in the cells of mice, bats and dolphins. I want you to believe that cows will produce TH4 hormone&quot;</p>
+</blockquote>
+
+<p>However, it violates the assumption of helpfulness if I were to try and tell a story about TH4 hormone that went like this...</p>
+
+<blockquote>
+<p>&quot;I’ve studied TH4 hormone for many years… and I have discovered it in the cells of whales, seals and dolphins. I want you to believe that kittens will produce TH4 hormone&quot;</p>
+</blockquote>
+
+<p>If I were to do this in real life and expected you to take me seriously, you would (quite rightly) conclude that I am a jerk. This idea has a lot of analogs. Here are a few examples:</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Chekhov%27s_gun">Chekhov&#39;s gun</a>: when telling a story, every element must be necessary. <em>&quot;One must never place a loaded rifle on the stage if it isn&#39;t going to go off. It&#39;s wrong to make promises you don&#39;t mean to keep.&quot;</em></li>
+<li>When giving <a href="https://en.wikipedia.org/wiki/Sworn_testimony">sworn testimony</a> we require people to <em>tell the truth, the whole truth, and nothing but the truth</em></li>
+<li><a href="https://www.sas.upenn.edu/%7Eharoldfs/dravling/grice.html">Grice&#39;s maxims</a> tell us that good communication is informative, truthful, pertinent and unambigious.</li>
+<li>Etc</li>
+</ul>
+
+<p>So ultimately, the claim is that a lot of what&#39;s going on when we &quot;let&quot; the salient similarities that appear in someone&#39;s argument drive our attention to a particular category, and then go on to endorse that category is... we assume someone is trying to help us learn about the world.</p>
+
+<h2 id="toc_7">An experimental test</h2>
+
+<h3 id="toc_8">Reseach goals</h3>
+
+<p>To generate an experimental test, we considered two different ways of constructing an argument, and we wanted to see what impact these might have on the premise monotonicity/non-monotonicity effect. Our two methods were:</p>
+
+<ul>
+<li><strong>Random sampling</strong>, in which the world generates true facts facts largely at random (e.g., dophins are cute, unicorns are awesome) and with no particular goal in mind</li>
+<li><strong>Relevant sampling</strong>, in which another (helpful) human selects true facts purposefully, with a deliberate intent to persuade you of the truth of some proposition</li>
+</ul>
+
+<h3 id="toc_9">Key procedural detail, and the dependent variable</h3>
+
+<p>We did this within the context of a reasoning task that used the following procedure:</p>
+
+<ul>
+<li>First, rate the strength of an inductive argument (e.g., <code>dolphin-&gt;cow</code>) that has a single premise, using a slider bar to indicate how likely it is that the conclusion item possesses the property (e.g., TH4 hormone). </li>
+<li>Next, tell people about a second item to produce a new inductive argument (e.g., <code>(dolphins + seals) -&gt; cow</code>) and use the slider bar to indicate how strong this argument is.</li>
+<li>The <em>dependent variable</em> is the <em>difference</em> between these two responses: a positive difference means the second argument is stronger (i.e., premise monotonicity), and a negative difference means that the second argument is weaker (i.e., premise non-monotonicity)</li>
+</ul>
+
+<h3 id="toc_10">Our hypotheses</h3>
+
+<ul>
+<li><p>When a helpful human makes an argument, the similarity between premise items will be deemed relevant, and the premise non-monotonicity effect will appear</p></li>
+<li><p>When an indifferent world generates random data, the similarity between premise items will be deemed irrelevant, and people will revert to premise monotonicity</p></li>
+</ul>
+
+<h3 id="toc_11">More procedural information, and independent variables</h3>
+
+<p>One potential issue that we have in designing this study is the fact that people know it is a psychological experiment, and people know that psychological experiments are designed by psychologists... who aren&#39;t always trustworthy people! So it&#39;s not going to be easy to convince people that they&#39;re seeing &quot;truly random&quot; information.</p>
+
+<p>To get around that, we designed a pretty &quot;over the top&quot; experiment to really drive home the idea. We did this by manipulating two <em>independent variables</em>. </p>
+
+<ol>
+<li><p>The <strong>cover story manipulation</strong>. When introducing the reasoning problem, we tried the obvious trick of just <em>telling</em> people about how the argument was (supposedly) generated. In the <strong>relevant cover story</strong> condition we told people that the facts were selected by a previous participant who wanted to help them make good guesses; in the <strong>neutral cover story</strong> we didn&#39;t say anything in particular about the origins of the argument;and in the <strong>random cover story</strong> condition we told people that the premise items were chosen at random from a data base of facts. </p></li>
+<li><p>The <strong>experience</strong> manipulation. To help ensure that people really did believe that the items were generated in a helpful way (relevant) or a random way, we also included a series of &quot;filler&quot; trials that looked exactly like the ones we actually cared about, but were designed to seem useful or useless. In the <strong>relevant filler</strong> condition, the arguments used in the filler items tended to be very convincing and consisted of highly relevant evidence (e.g., <code>eagles + hawks -&gt; doves</code> seems to include useful evidence); whereas in the <strong>random filler</strong> condition the filler trials included some very unhelpful evidence (e.g., <code>eagles + NOT tortoises -&gt; doves</code>)</p></li>
+</ol>
+
+<p>The order of arguments was designed so that people tended to see the filler items before seeing the target items (see slide 61-62)</p>
+
+<h3 id="toc_12">An incomplete 2x3 design</h3>
+
+<p>Taken together, these two manipulations yield four possible conditions:</p>
+
+<ul>
+<li>Relevant story, Relevant fillers (1)</li>
+<li>Neutral story, Relevant fillers (2)</li>
+<li>Neutral story, Random fillers (3)</li>
+<li>Random story, Random fillers (4)</li>
+</ul>
+
+<p>Notice that there are two &quot;logically possible&quot; conditions that we did not include:</p>
+
+<ul>
+<li>Relevant story, random fillers</li>
+<li>Random story, relevant fillers</li>
+</ul>
+
+<p>In most situations, it&#39;s considered good scientific practice to include all possible combinations of your independent variables, yet for this study we didn&#39;t. Why?</p>
+
+<p>Hopefully the answer is obvious: those two conditions introduce a very nasty confound... namely that the cover story and the filler items contradict each other. We would end up lying to participants if we included these conditions, and participants might rightly conclude that we were being jerks. </p>
+
+<p>We used two different &quot;target&quot; arguments that would be expected to produce premise non-monotonicity under normal circumstances...</p>
+
+<h3 id="toc_13">Target argument #1</h3>
+
+<div><pre><code class="language-none">Grizzly bears produce TH-L2
+--
+Therefore, lions produce TH-L2</code></pre></div>
+
+<p>versus </p>
+
+<div><pre><code class="language-none">Grizzly bears produce TH-L2
+Black bears produce TH-L2
+
+--
+Therefore, lions produce TH-L2</code></pre></div>
+
+<ul>
+<li><p>If this similarity is deemed relevant… it strongly suggests TH-L2 is a property of bears so the extra evidence weakens the conclusion... non monotonicity</p></li>
+<li><p>If this similarity is deemed irrelevant because the data are random … the extra “evidence” is almost useless. So we expect no difference or a weak monotonicity effect because at least there’s some extra evidence that TH-L2 is not rare</p></li>
+</ul>
+
+<h3 id="toc_14">Target argument #2</h3>
+
+<p>The second target argument had roughly the same structure and the same logic to it. The single-premise version of the argument asked people to generalise from <code>tigers -&gt; ferrets</code> and the two-premise version asked people to generalise from <code>(tigers + lions) -&gt; ferrets</code></p>
+
+<h3 id="toc_15">Control argument</h3>
+
+<p>Finally, in order to check that the effect doesn&#39;t happen all the time, we included a control condition where it really shouldn&#39;t make much of a difference, because the second premise should always strengthen the argument. We did this with an argument where people first rated <code>orangutan -&gt; gorilla</code> and then rated <code>(orangutan + chimpanzee -&gt; gorilla</code></p>
+
+<h3 id="toc_16">Predictions?</h3>
+
+<ul>
+<li><p>So we have four conditions, and our hypotheses lead to a clear prediction about how the dependent variable should change across the conditions: for the target arguments, the difference score should be largest in condition 1, followed by conditions 2 and 3, and then by condition 4. For the control argument, there should be very little effect. </p></li>
+<li><p>Better yet, the alternative theory (i.e., that the method of argument construction doesn&#39;t matter and that similarity always has the same effect no matter what) makes a clear prediction too. The DV should be the same for all conditions, but it should be negative for the two target arguments (non-monotonicity), and positive for the control argument (monotonicity)</p></li>
+<li><p>Even better, the other possibility (that we screwed up our design and people responded randomly) also yields a different prediction, namely that the data should be random and there will be no systematic or meaningful changes across conditions</p></li>
+</ul>
+
+<p>Slides 70-78 provide a graphical illustration.</p>
+
+<h3 id="toc_17">A digression</h3>
+
+<p>What do you think happened? How confident are you that I&#39;m about to tell you that our predictions came true? You&#39;re probably very confident, right? Because... if our predictions didn&#39;t come true, I wouldn&#39;t be writing these lecture notes about a cool study... and you wouldn&#39;t have read all these preliminaries. The fact that I have set up the story like this - assuming that I am a helpful human trying to persuade you of something - <em>strongly</em> hints at what the answer is going to be, doesn&#39;t it? This whole set up is very clearly a Chekhov&#39;s gun and it&#39;s about to go off in the results section that will inevitable reveal that I was right in my predictions.</p>
+
+<p>In contrast, how confident do you think I was when I ran the study originally? Nature doesn&#39;t supply us with Chekhov&#39;s guns, and my predictions don&#39;t always come true (unfortunately). So when we ran the study, I had no such guarantee that the results would tell a nice story... and I was not at all confident that it would work.</p>
+
+<p>Oh, hey... that&#39;s actually our hypothesis right? Human reasoning when a knowledgeable and helpful informant (teacher!) presents you with an argument is qualitatively different from when an uncaring and indifferent universe generates observations (science!).</p>
+
+<h3 id="toc_18">... the inevitable pattern of results</h3>
+
+<p>As shown on slides 80-83, we got <em>exactly</em> the pattern of results we predicted. Obviously we did, otherwise I wouldn&#39;t have written this lecture! </p>
+
+<p>Sadly, not all my experiments work out that nicely. </p>
+
+<h3 id="toc_19">... another digression ...</h3>
+
+<ul>
+<li>One thing that the paper talks about (but I&#39;ve hidden from this lecture) is that we went a fair bit further than just making &quot;qualitative&quot; predictions about what would happen in the experiment. We also built a <strong>computational model</strong> that tries to use the same set of facts to reason in a human like way. Specifically:</li>
+<li>In some conditions the model is equipped with a simple &quot;theory of mind&quot; (i.e., it assumes it is being given helpful evidence) and in other conditions it assumes it is being fed random evidence... and we show that it produces human-like reasoning</li>
+<li>The model is based on (Bayesian reasoning)[https://en.wikipedia.org/wiki/Bayesian_inference], a tool that is used quite widely in statistics, artificial intelligence and machine learning. However, it&#39;s beyond the scope of this class to talk about Bayesian reasoning - I just wanted to mention it for those students who are also taking AI and computer science classes, because there are some really neat connections between psychology and computer science in this particular domain.</li>
+</ul>
+
+<h3 id="toc_20">Limitations?</h3>
+
+<ul>
+<li>Sample size too small? 
+
+<ul>
+<li>Probably not a problem. We collected data from 538 participants</li>
+</ul></li>
+<li>Sample not representative?
+
+<ul>
+<li>Maybe? Our participants were recruited online: diverse in age and gender, but narrow in nationality (USA) and probably above average in education</li>
+<li>Important question: is there a plausible reason to think this might matter?</li>
+</ul></li>
+<li>Stimulus order not randomised?
+
+<ul>
+<li>Probably not. The non random ordering (i.e., fillers mostly first) was intentional, and was central to the experimental manipulation</li>
+</ul></li>
+<li>Factors not fully crossed?
+
+<ul>
+<li>Absolutely not. It would have been absurd to include a “relevant story + random experience” condition… this would introduce a confound colloquially referred to as “lying to participants”</li>
+</ul></li>
+<li>Limited range of arguments?
+
+<ul>
+<li>Definitely a limitation. We used a fixed set of six arguments, all of which were about animals.</li>
+<li>Important question: why might this matter? (hint… people have different knowledge)</li>
+</ul></li>
+<li>Limited range of phenomena?
+
+<ul>
+<li>Definitely a limitation. We only looked at the premise (non) monotonicity effect. </li>
+<li>There are good reasons to think the same manipulations should influence other inductive phenomena (and in more recent work we&#39;ve found some evidence for that!) but this study did not consider them</li>
+</ul></li>
+</ul>
+
+
+
+
+</body>
+
+</html>
